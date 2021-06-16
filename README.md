@@ -2,9 +2,12 @@
 You can find a ZIP archive as an attachment. This includes 2 text files with each containing a list of words. Each list contains words that are matching somehow. It's up to you to figure out what the connecting part is. Group these words and sort them alphabetically within the group. Sort the groups alphabetically and use the first word of each group while sorting. One last note, I don't want duplicates in each final sort result.
 
 A sample of the required sorting:
-A1, A2, A3
+
+A1, A2, A3 
+
 B1
-C1, C2
+
+C1, C2 
 
 ### Sample Inputs
 Lists of words
@@ -13,7 +16,7 @@ Lists of words
     ["Erdamamst", "Spari", "Paris", "Rispa", "Rotterdam", "Rispa", "Damrotter", "Arnhem", "Terdamrot", "Amsterdam", "Hemarn", "Erdamamst"]
 
 ### Installation
-**directly using your npm**
+**directly using your Node**
 - cd to dist folder
 - excecute **node main.js**
 - node version used v12.18.2
@@ -48,6 +51,8 @@ then the sorting and formating is taking place for more friendly describtive res
 - request payload sample
 `{  "input_words_lists": [ ["Hemarn", "Rispa", "Spari", "Terdamrot", "Amsterdam", "Arnhem", "Erdamamst", "Damrotter", "Rotterdam", "Paris"],  ["Erdamamst", "Spari", "Paris", "Rispa", "Rotterdam", "Rispa", "Damrotter", "Arnhem", "Terdamrot", "Amsterdam", "Hemarn", "Erdamamst"]  ]
 }`
+
+- you can pass "algorithm" (optional) to select which algorithm to use to solve this porblem. now only "SORT_AND_COMPARE" is implemented.
 
 - reponse is object with keys as dataset number and array of groupped anagrams ex:`{"0":[["Amsterdam","Erdamamst"],["Arnhem","Hemarn"],["Damrotter","Rotterdam","Terdamrot"],["Paris","Rispa","Spari"]],"1":[["Amsterdam","Erdamamst"],["Arnhem","Hemarn"],["Damrotter","Rotterdam","Terdamrot"],["Paris","Rispa","Spari"]]}`
 
